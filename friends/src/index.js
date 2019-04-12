@@ -7,17 +7,16 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { friendReducer } from './reducers';
 import thunk from 'redux-thunk';
-import { BrowserRouter as Router } from 'react-router-dom';
 
 const store = createStore(
     friendReducer, applyMiddleware(thunk)
 )
 
+const rootElement = document.getElementById('root');
 ReactDOM.render(
-    <Provider store={store}>
-        <Router>
-            <App />
-        </Router>
-    </Provider>,
-    document.getElementById('root'));
+  <Provider store={store}>
+        <App />
+  </Provider>,
+  rootElement
+)
 

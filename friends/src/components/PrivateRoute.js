@@ -23,8 +23,8 @@ const PrivateRoute = ({
 }
 
 const mapStateToProps = ({ token, errorStatusCode }) => ({
-  errorStatusCode,
-  token
+    token,
+    errorStatusCode
 })
 
 export default withRouter(
