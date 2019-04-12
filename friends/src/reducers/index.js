@@ -1,4 +1,8 @@
-
+import {
+    FETCH_FRIEND_START,
+    FETCH_FRIEND_SUCCESS,
+    FETCH_FRIEND_FAILURE
+} from '../actions'
 
 const initialState = {
     friends: [],
@@ -6,8 +10,8 @@ const initialState = {
     isFetching: false
 }
 
-export const rootReducer = (state = initialState, action) => {
-    switch (action, type) {
+export const friendReducer = (state = initialState, action) => {
+    switch (action.type) {
         case FETCH_FRIEND_START:
             return {
                 ...state,
